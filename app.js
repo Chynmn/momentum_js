@@ -1,8 +1,12 @@
-const a = 5;
-const b = 2;
-let myName = "chynmn";
+const h1 = document.querySelector("div.hello:first-child h1");
 
-console.log(a + b);
-console.log(a * b);
-console.log(a / b);
-console.log("Hello" + " my name is " + myName);
+function handleTitleClick() {
+  const clickedClass = "clicked";
+  if (h1.classList.contains(clickedClass)) {
+    h1.classList.remove(clickedClass);
+  } else {
+    h1.classList.add(clickedClass);
+  }
+}
+
+h1.addEventListener("click", handleTitleClick);
