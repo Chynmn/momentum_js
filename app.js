@@ -13,12 +13,17 @@
 
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-
-const link = document.querySelector("a");
+const greeting = document.querySelector("#greeting");
+const HIDDEN_CLASSNAME = "hidden";
+// const link = document.querySelector("a");
 
 function onLogintSubmit(event) {
   event.preventDefault();
-  console.log(loginInput.value);
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  const username = loginInput.value;
+  // greeting.innerText = "Hello " + username;
+  greeting.innerText = `Hello ${username}`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
 function handleLinkClick(event) {
@@ -27,4 +32,4 @@ function handleLinkClick(event) {
 }
 
 loginForm.addEventListener("submit", onLogintSubmit);
-link.addEventListener("click", handleLinkClick);
+// link.addEventListener("click", handleLinkClick);
