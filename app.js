@@ -21,7 +21,9 @@ function onLogintSubmit(event) {
   event.preventDefault();
   loginForm.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
+  localStorage.setItem("username", username);
   // greeting.innerText = "Hello " + username;
+  // 백틱 기호와 ${변수명}을 활용한 방법을 더 선호
   greeting.innerText = `Hello ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
