@@ -16,6 +16,14 @@ h1 {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 } */
 
+/* @import url("https://fonts.googleapis.com/css?family=Open+Sans"); */
+@import "main.css";
+@import "location.css";
+@import "clock.css";
+@import "weather.css";
+@import "center.css";
+@import "todo.css";
+
 .hidden {
   display: none;
 }
